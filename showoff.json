@@ -1,0 +1,7 @@
+{ 
+  "name": "Introduction to Backbone JS",
+  "description": "A Teck Talk at AT&T Interactive",
+  "sections": [
+    {"section":"slide"}
+  ]
+}
