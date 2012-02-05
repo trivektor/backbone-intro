@@ -12,7 +12,31 @@
 
 !SLIDE transition=uncover
 <h1 class="slide_title">Current problems</h1>
-<img src="img/callback_soup.jpg" />
+<pre class="sh_javascript_dom">
+  //Callback soup
+  $("#element").click(function(){
+      ...
+      for (...) {
+        $.ajax({ url: url, type: "PUT", success: function(response) { ... } })
+      }
+    }
+  })
+  
+  $("#another_element").click(function(){
+    if (...) {
+      ...
+    } else {
+      $.ajax({ url: url, type: "GET", success: function(response) { ... } })
+    }
+  })
+  
+  $("#and_another_element").autocomplete({
+    serviceUrl: url,
+    onSelect: function(value, data) {
+      $.ajax({ url: url, type: "GET", success: function(response) { ... } })
+    }
+  })
+</pre>
 
 !SLIDE transition=uncover
 <h1 class="slide_title">Current problems</h1>
@@ -38,6 +62,9 @@
     }
   })
 </pre>
+<br>
+<br>
+<br>
 
 !SLIDE transition=uncover
 <h1 class="slide_title">Advantages</h1>
