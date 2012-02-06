@@ -15,7 +15,7 @@
 
     <!-- Slide 1 -->
     <div class='slide' id='slide_1'>
-      <div class='title' style='margin-top:200px; text-align:center'>Introduction to Backbone JS</div>
+      <div class='title center highlight'>Introduction to Backbone JS</div>
     </div>
 
     <!-- Slide 2 -->
@@ -26,43 +26,95 @@
           <li>emerging Javascript framework</li>
           <li>MVC Architecture</li>
           <li>used by major applications (LinkedIn, Basecamp, Pandora, Flow etc)</li>
-
         </ul>
       </div>
     </div>
     
     <!-- Slide 3 -->
     <div class='slide' id='slide_3'>
-      <div class='title'>Current problems</div>
+      <h1 class='title'>Status Quo</h1>
       <div class='content'>
         <pre class='sh_javascript_dom'>
 //Callback soup and salad (not as good as Specialty's though)
 $("#element").click(function(){
-      ...
-      for (...) {
-        $.ajax({ url: url, type: "PUT", success: function(response) { ... } })
-      }
+    ...
+    for (...) {
+      $.ajax({ url: url, type: "PUT", success: function(response) { ... } })
     }
-  })
+  }
+})
 
-  $("#another_element").click(function(){
-    if (...) {
-      ...
-    } else {
-      $.ajax({ url: url, type: "GET", success: function(response) { ... } })
-    }
-  })
+$("#another_element").click(function(){
+  if (...) {
+    ...
+  } else {
+    $.ajax({ url: url, type: "GET", success: function(response) { ... } })
+  }
+})
 
-  $("#and_another_element").autocomplete({
-    serviceUrl: url,
-    onSelect: function(value, data) {
-      $.ajax({ url: url, type: "GET", success: function(response) { ... } })
-    }
-  })
+$("#and_another_element").autocomplete({
+  serviceUrl: url,
+  onSelect: function(value, data) {
+    $.ajax({ url: url, type: "GET", success: function(response) { ... } })
+  }
+})
         </pre>
       </div>
     </div>
     
+    <!-- Slide 4 -->
+    <div class="slide" id="slide_4">
+      <h1 class="title">Status Quo</h1>
+      <div class="content">
+        <div style="float:left; width: 600px">
+          <%= image_tag "img/bus_packed.jpg" %>
+        </div>
+        <div style="margin-left: 650px; margin-top:100px">Logic is tightly coupled, packed</div>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide" id="slide_5">
+      <h1 class="title">Status Quo</h1>
+      <div class="content">
+        <div style="float:left; width: 600px">
+          <%= image_tag "img/twin-girls.jpg" %>
+        </div>
+        <div style="margin-left: 650px; margin-top:100px">No distinction between data and presentation</div>
+      </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide" id="slide_6">
+      <h1 class="title">Status Quo</h1>
+      <div class="content">
+        <div style="float:left; margin-right: 40px">
+          <%= image_tag "img/recycle-symbol-with-plugs.jpg" %>
+        </div>
+        <div style="margin-top:100px">No easy way to reuse code components</div>
+      </div>
+    </div>
+    
+    <!-- Slide 7 -->
+    <div class="slide" id="slide_7">
+      <div class="content center" style="padding-top:40px">
+        <%= image_tag "img/steve.jpg" %>
+      </div>
+    </div>
+    
+    <!-- Slide 8 -->
+    <div class="slide" id="slide_8">
+      <h1 class="title center" style="margin-top:200px">Before we get into Backbone JS</h1>
+    </div>
+    
+    <!-- Slide 9 -->
+    <div class="slide" id="slide_9">
+      <h1 class='title center highlight'>Underscore JS</h1>
+      <div class="content center">
+        <a href="http://documentcloud.github.com/underscore/" target="_blank">http://documentcloud.github.com/underscore/</a>
+        <p style="margin-top:10px">Small library (< 4kb minified) that makes life easier</p>
+      </div>
+    </div>
     
     
   </body>
