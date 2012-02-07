@@ -2,7 +2,10 @@ pre.sh_sourceCode {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  background: #000; color:#fff; padding:10px 
+  background: #000; color:#fff; padding:10px;
+  margin-top: 20px;
+  line-height: 23px;
+  border-radius: 4px;
 }
 pre.sh_sourceCode .sh_keyword { color: #cf633e; font-weight: bold; }           /* language keywords */
 pre.sh_sourceCode .sh_type { color: darkgreen; }                            /* basic types */

@@ -43,14 +43,10 @@
         <pre class='sh_javascript_dom'>
 //Callback soup and salad (not as good as Specialty's though)
 $("#element").click(function(){
-    ...
-    for (...) {
-      $.ajax({ url: url, type: "PUT", success: function(response) { ... } })
-    }
-  }
+  ...
 })
 
-$("#another_element").click(function(){
+$("#another_element").change(function(){
   if (...) {
     ...
   } else {
@@ -63,6 +59,10 @@ $("#and_another_element").autocomplete({
   onSelect: function(value, data) {
     $.ajax({ url: url, type: "GET", success: function(response) { ... } })
   }
+})
+
+$("#and_yet_another_element").keypress(function() {
+  //duh, when is this gonna end?
 })
         </pre>
       </div>
@@ -103,7 +103,7 @@ $("#and_another_element").autocomplete({
     
     <!-- Slide 7 -->
     <div class="slide" id="slide_7">
-      <div class="content center" style="padding-top:40px">
+      <div class="content center" style="padding-top:80px">
         <%= image_tag "img/steve.jpg" %>
       </div>
     </div>
@@ -170,13 +170,13 @@ $("#and_another_element").autocomplete({
     <div class="slide" id="slide_15">
       <h1 class='title center'>Model</h1>
       <div class='content'>
-        <ul style="margin-bottom:20px">
+        <ul>
           <li>A representation of data</li>
           <li>Actions: saving, retrieving, conversion, validation, triggering events etc</li>
         </ul>
         <pre class="sh_javascript_dom">
 // A model that represents a book object
-book = {
+var book = {
   title: "Gulliver’s Travels",
   year: 1726,
   author: "Johnathan Swift" 
@@ -189,7 +189,10 @@ var Person = Backbone.Model.extend({
     ...
   },
   validate: function() {
-    ...
+    // Make sure a cat does not get in here
+  },
+  edit: function() {
+    // I wanna change my name to "Mark Zuckerberg"
   }
 });
         </pre>
@@ -200,7 +203,12 @@ var Person = Backbone.Model.extend({
     <div class="slide" id="slide_16">
       <h1 class='title center'>Collection</h1>
       <div class='content'>
+        <ul>
+          <li>An ordered set of models</li>
+          <li>Useful when working with "collection view" (a view containing sub-views each of which contains a model)</li>
+        </ul>
         <pre class='sh_javascript_dom'>
+// A pseudo-collection for the sake of illustration
 People = [
 	{
 	  name: "Barack Obama", 
@@ -240,6 +248,24 @@ People = [
           <li>A view in the traditional sense (presentation logic), and a "presenter"</li>
           <li>Captures user's interactions</li>
         </ul>
+        <pre class="sh_javascript_dom">
+var KeywordView = Backbone.Model.extend({
+  tagName: "li",
+  className: "keyword",
+  initialize: function() {
+    // Housekeeping and event bindings etc
+  }
+  events: {
+    'click .this' : 'doThat'
+  },
+  render: function() {
+    ...
+  },
+  doThat: function() {
+    // Do your shit
+  }
+})
+        </pre>
       </div>
     </div>
     
