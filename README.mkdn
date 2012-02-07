@@ -3,4 +3,6 @@ About
 
 These are the slides for "Introduction to Backbone JS" Tech Talk at AT&T Interactive by Andrew Kim and Tri Vuong.
 
-The presentation is available online at http://backbone-intro.heroku.com/
+The presentation is available online at [http://backbone-intro.heroku.com/](http://backbone-intro.heroku.com)
+
+To run locally, pull, bundle install, and do ruby -rubygems presentation.rb
