@@ -12,7 +12,7 @@ $(function() {
     if (n > slides.length) n = slides.length;
     
     slides.hide();
-    $("#slide_" + n).show();
+    $(slides.get(n-1)).show();
   })
   
 })

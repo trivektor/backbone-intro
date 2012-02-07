@@ -14,7 +14,7 @@
   <body onload="sh_highlightDocument();">
 
     <!-- Slide 1 -->
-    <div class='slide' id='slide_1'>
+    <div class='slide'>
       <h1 class='title center highlight'>Introduction to Backbone JS</h1>
       <div class='content center' style="font-size:26px; margin-top:40px">
         <a href="http://github.com/wookimiii" target="_blank">Andrew Kim</a> 
@@ -25,7 +25,7 @@
     </div>
 
     <!-- Slide 2 -->
-    <div class='slide' id='slide_2'>
+    <div class='slide'>
       <h1 class='title'>What is Backbone JS?</h1>
       <div class='content'>
         <ul>
@@ -37,7 +37,7 @@
     </div>
     
     <!-- Slide 3 -->
-    <div class='slide' id='slide_3'>
+    <div class='slide'>
       <h1 class='title'>Status Quo</h1>
       <div class='content'>
         <pre class='sh_javascript_dom'>
@@ -69,7 +69,7 @@ $("#and_yet_another_element").keypress(function() {
     </div>
     
     <!-- Slide 4 -->
-    <div class="slide" id="slide_4">
+    <div class="slide">
       <h1 class="title">Status Quo</h1>
       <div class="content">
         <div style="float:left; width: 600px">
@@ -80,7 +80,7 @@ $("#and_yet_another_element").keypress(function() {
     </div>
 
     <!-- Slide 5 -->
-    <div class="slide" id="slide_5">
+    <div class="slide">
       <h1 class="title">Status Quo</h1>
       <div class="content">
         <div style="float:left; width: 600px">
@@ -91,7 +91,7 @@ $("#and_yet_another_element").keypress(function() {
     </div>
 
     <!-- Slide 6 -->
-    <div class="slide" id="slide_6">
+    <div class="slide">
       <h1 class="title">Status Quo</h1>
       <div class="content">
         <div style="float:left; margin-right: 40px">
@@ -102,19 +102,19 @@ $("#and_yet_another_element").keypress(function() {
     </div>
     
     <!-- Slide 7 -->
-    <div class="slide" id="slide_7">
+    <div class="slide">
       <div class="content center" style="padding-top:80px">
         <%= image_tag "img/steve.jpg" %>
       </div>
     </div>
     
     <!-- Slide 8 -->
-    <div class="slide" id="slide_8">
+    <div class="slide">
       <h1 class="title center one_sentence">Before we get into Backbone JS</h1>
     </div>
     
     <!-- Slide 9 -->
-    <div class="slide" id="slide_9">
+    <div class="slide">
       <h1 class='title center highlight'>Underscore JS</h1>
       <div class="content center">
         <a href="http://documentcloud.github.com/underscore/" target="_blank">http://documentcloud.github.com/underscore/</a>
@@ -123,7 +123,7 @@ $("#and_yet_another_element").keypress(function() {
     </div>
     
     <!-- Slide 10 -->
-    <div class="slide" id="slide_10">
+    <div class="slide">
       <h1 class='title center'>Underscore JS</h1>
       <div class='content'>
         <h2>Arrays</h2>
@@ -138,17 +138,17 @@ $("#and_yet_another_element").keypress(function() {
     </div>
     
     <!-- Slide 11 -->
-    <div class="slide" id="slide_11">
+    <div class="slide">
       <h1 class='title center one_sentence'>What does Backbone give you?</div>
     </div>
     
     <!-- Slide 12 -->
-    <div class="slide" id="slide_12">
+    <div class="slide">
       <h1 class='title center one_sentence'>More Objects!</div>
     </div>
     
     <!-- Slide 13 -->
-    <div class="slide" id="slide_13">
+    <div class="slide">
       <div class='content center one_sentence'>
         Everything is an Object <br />
         (or a function) <br />
@@ -158,7 +158,7 @@ $("#and_yet_another_element").keypress(function() {
     </div>
     
     <!-- Slide 14 -->
-    <div class="slide" id="slide_14">
+    <div class="slide">
       <h1 class='title center'>Model</h1>
       <div class='content center'>
         <%= image_tag "img/model.jpg" %>
@@ -167,7 +167,7 @@ $("#and_yet_another_element").keypress(function() {
     </div>
     
     <!-- Slide 15 -->
-    <div class="slide" id="slide_15">
+    <div class="slide">
       <h1 class='title center'>Model</h1>
       <div class='content'>
         <ul>
@@ -200,7 +200,7 @@ var Person = Backbone.Model.extend({
     </div>
     
     <!-- Slide 16 -->
-    <div class="slide" id="slide_16">
+    <div class="slide">
       <h1 class='title center'>Collection</h1>
       <div class='content'>
         <ul>
@@ -232,7 +232,7 @@ People = [
     </div>
     
     <!-- Slide 17 -->
-    <div class="slide" id="slide_17">
+    <div class="slide">
       <h1 class='title center'>View</h1>
       <div class='content center'>
         <%= image_tag "img/a-view-to-a-kill-poster.jpg" %>
@@ -241,7 +241,7 @@ People = [
     </div>
     
     <!-- Slide 18 -->
-    <div class="slide" id="slide_18">
+    <div class="slide">
       <h1 class='title center'>View</h1>
       <div class='content'>
         <ul>
@@ -270,15 +270,15 @@ var KeywordView = Backbone.Model.extend({
     </div>
     
     <!-- Slide 19 -->
-    <div class="slide" id="slide_19">
+    <div class="slide">
       <h1 class='title center one_sentence'>What we've learned</h1>
     </div>
     
     <!-- Slide 20 -->
-    <div class="slide" id="slide_20">
+    <div class="slide">
       <h1 class='title center'>Advantages</h1>
       <div class='content'>
-        <ul>
+        <ul style="margin-top: 100px">
           <li>Organized UI code base</li>
           <li>Modular code</li>
           <li>Reusable code components (models, views)</li>
@@ -288,10 +288,10 @@ var KeywordView = Backbone.Model.extend({
     </div>
     
     <!-- Slide 21 -->
-    <div class="slide" id="slide_21">
+    <div class="slide">
       <h1 class='title center'>Advantages</h1>
       <div class='content'>
-        <ul>
+        <ul style="margin-top: 100px">
           <li>Testable</li>
           <li>Large community, great support (Github, StackOverflow)</li>
           <li>Detailed documentation (annotated source code)</li>
@@ -300,9 +300,9 @@ var KeywordView = Backbone.Model.extend({
     </div>
     
     <!-- Slide 22 -->
-    <div class='slide' id='slide_22'>
+    <div class='slide'>
       <h1 class='title center'>Disadvantages</h1>
-      <div class='content'>
+      <div class='content' style="margin-top: 100px">
         <ul>
           <li>No clear design guidance (there’s always more than one way to do things)</li>
           <li>More files to manage/logic is spread</li>
@@ -312,9 +312,9 @@ var KeywordView = Backbone.Model.extend({
     </div>
     
     <!-- Slide 23 -->
-    <div class='slide' id='slide_23'>
+    <div class='slide'>
       <h1 class='title center'>Resources</h1>
-      <div class='content'>
+      <div class='content' style="margin-top: 100px">
         <ul>
           <li>
             <a href="https://github.com/documentcloud/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites" target="_blank">
