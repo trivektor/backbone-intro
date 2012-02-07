@@ -19,7 +19,7 @@ pre.sh_sourceCode .sh_cbracket { color: #fff; }                              /* 
 pre.sh_sourceCode .sh_todo { font-weight: bold; background-color: cyan; }   /* TODO and FIXME */
 
 /* Predefined variables and functions (for instance glsl) */
-pre.sh_sourceCode .sh_predef_var { color: darkblue; }
+pre.sh_sourceCode .sh_predef_var { color: #fff }
 pre.sh_sourceCode .sh_predef_func { color: darkblue; font-weight: bold; }
 
 /* for OOP */

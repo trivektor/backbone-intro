@@ -116,6 +116,118 @@ $("#and_another_element").autocomplete({
       </div>
     </div>
     
+    <!-- Slide 10 -->
+    <div class="slide" id="slide_10">
+      <h1 class='title center'>Underscore JS</h1>
+      <div class='content'>
+        <h2>Arrays</h2>
+        <p>first, initial, last, rest, compact, flatten, without, union, intersection, difference, uniq, zip, indexOf, last, IndexOf, range</p>
+        <br /><br />
+        <h2>Collections</h2>
+        <p>each,  map,  reduce,  reduceRight,  find,  filter,  reject,  all,  any,  include,  invoke,  pluck,  max,  min,  sortBy,  groupBy,  sortedIndex,  shuffle,  toArray,  size</p>        
+        <br /><br />
+        <h2>Objects</h2>
+        <p>keys, values, functions, extend, defaults, clone, tap, has, isEqual, isEmpty, isElement, isArray, isArguments, isFunction, isString, isNumber, isBoolean, isDate, isRegExp, isNaN, isNull, isUndefined</p>
+      </div>
+    </div>
     
+    <!-- Slide 11 -->
+    <div class="slide" id="slide_11">
+      <h1 class='title center'>What does Backbone give you?</div>
+    </div>
+    
+    <!-- Slide 12 -->
+    <div class="slide" id="slide_12">
+      <h1 class='title center'>More Objects!</div>
+    </div>
+    
+    <!-- Slide 13 -->
+    <div class="slide" id="slide_13">
+      <div class='content center'>
+        Everything is an Object <br />
+        (or a function) <br />
+        typeof Backbone=== "object” <br />
+        typeof Backbone.Model === “function” <br />
+      </div>
+    </div>
+    
+    <!-- Slide 14 -->
+    <div class="slide" id="slide_14">
+      <h1 class='title center'>Model</h1>
+      <%= image_tag "model.jpg" %>
+    </div>
+    
+    <!-- Slide 15 -->
+    <div class="slide" id="slide_15">
+      <h1 class='title center'>Model</h1>
+      <div class='content'>
+        <ul style="margin-bottom:20px">
+          <li>A representation of data</li>
+          <li>Actions: saving, retrieving, conversion, validation, triggering events etc</li>
+        </ul>
+        <pre class="sh_javascript_dom">
+// A model that represents a book object
+book = {
+  title: "Gulliver’s Travels",
+  year: 1726,
+  author: "Johnathan Swift" 
+}
+
+
+// A model that represents a person object
+var Person = Backbone.model.extend({
+  save: function() {
+    ...
+  },
+  validate: function() {
+    ...
+  }
+});
+        </pre>
+      </div>
+    </div>
+    
+    <!-- Slide 16 -->
+    <div class="slide" id="slide_16">
+      <h1 class='title center'>Collection</h1>
+      <div class='content'>
+        <pre class='sh_javascript_dom'>
+People = [
+	{
+	  name: "Barack Obama", 
+	  job: "US President"
+	},
+	{
+	  name: "Sandra Bullock", 
+	  job: "Actress"
+	},
+	{
+	  name: "David Beckham",
+	  job: "Soccer Player"
+	},
+	{
+	  name: "Arnold Schwarzenegger", 
+	  job: "N/A"
+	}
+]
+        </pre>
+      </div>
+    </div>
+    
+    <!-- Slide 17 -->
+    <div class="slide" id="slide_17">
+      <h1 class='title center'>View</h1>
+      <div class='content center'>
+        <%= image_tag "img/a-view-to-a-kill-poster.jpg" %>
+        <p style="margin-top:15px">A View to a Kill (1985)</p>
+      </div>
+    </div>
+    
+    <!-- Slide 18 -->
+    <div class="slide" id="slide_18">
+      <h1 class='title center'>View</h1>
+      <div class='content center'>
+      </div>
+    </div>
   </body>
 </html>
