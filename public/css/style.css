@@ -7,7 +7,8 @@ html, body {
   width: 100%; }
 
 a {
-  color: #55a1d5; }
+  color: #55a1d5;
+  text-decoration: none; }
 
 body {
   background: #404040;
@@ -25,7 +26,7 @@ h2, h3 {
   width: 80%;
   margin: 0 auto;
   background: #fff;
-  box-shadow: 0 13px 23px #222; }
+  box-shadow: 0 13px 36px #141414; }
   .slide .title {
     font-weight: normal;
     font-size: 60px;

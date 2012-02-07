@@ -15,12 +15,18 @@
 
     <!-- Slide 1 -->
     <div class='slide' id='slide_1'>
-      <div class='title center highlight'>Introduction to Backbone JS</div>
+      <h1 class='title center highlight'>Introduction to Backbone JS</h1>
+      <div class='content center' style="font-size:26px; margin-top:40px">
+        <a href="http://github.com/wookimiii" target="_blank">Andrew Kim</a> 
+        and 
+        <a href="http://github.com/trivektor" target="_blank">Tri Vuong</a>
+        <p style="margin-top:15px">Search and Data Tools</p>
+      </div>
     </div>
 
     <!-- Slide 2 -->
     <div class='slide' id='slide_2'>
-      <div class='title'>What is Backbone JS?</div>
+      <h1 class='title'>What is Backbone JS?</h1>
       <div class='content'>
         <ul>
           <li>emerging Javascript framework</li>
@@ -133,17 +139,17 @@ $("#and_another_element").autocomplete({
     
     <!-- Slide 11 -->
     <div class="slide" id="slide_11">
-      <h1 class='title center'>What does Backbone give you?</div>
+      <h1 class='title center' style='margin-top:200px'>What does Backbone give you?</div>
     </div>
     
     <!-- Slide 12 -->
     <div class="slide" id="slide_12">
-      <h1 class='title center'>More Objects!</div>
+      <h1 class='title center' style='margin-top:200px'>More Objects!</div>
     </div>
     
     <!-- Slide 13 -->
     <div class="slide" id="slide_13">
-      <div class='content center'>
+      <div class='content center' style='margin-top:200px; font-size:40px'>
         Everything is an Object <br />
         (or a function) <br />
         typeof Backbone=== "object” <br />
@@ -154,7 +160,10 @@ $("#and_another_element").autocomplete({
     <!-- Slide 14 -->
     <div class="slide" id="slide_14">
       <h1 class='title center'>Model</h1>
-      <%= image_tag "model.jpg" %>
+      <div class='content center'>
+        <%= image_tag "img/model.jpg" %>
+        <%= image_tag "img/lego-donkey-kong.jpg" %>
+      </div>
     </div>
     
     <!-- Slide 15 -->
@@ -175,7 +184,7 @@ book = {
 
 
 // A model that represents a person object
-var Person = Backbone.model.extend({
+var Person = Backbone.Model.extend({
   save: function() {
     ...
   },
@@ -226,8 +235,74 @@ People = [
     <!-- Slide 18 -->
     <div class="slide" id="slide_18">
       <h1 class='title center'>View</h1>
-      <div class='content center'>
+      <div class='content'>
+        <ul>
+          <li>A view in the traditional sense (presentation logic), and a "presenter"</li>
+          <li>Captures user's interactions</li>
+        </ul>
       </div>
     </div>
+    
+    <!-- Slide 19 -->
+    <div class="slide" id="slide_19">
+      <h1 class='title center' style='margin-top:200px'>What we've learned</h1>
+    </div>
+    
+    <!-- Slide 20 -->
+    <div class="slide" id="slide_20">
+      <h1 class='title center'>Advantages</h1>
+      <div class='content'>
+        <ul>
+          <li>Organized UI code base</li>
+          <li>Modular code</li>
+          <li>Reusable code components (models, views)</li>
+          <li>Design patterns and principles Dependency Injection, Publisher/Subscriber Pattern, Single Responsibility etc</li>          
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Slide 21 -->
+    <div class="slide" id="slide_21">
+      <h1 class='title center'>Advantages</h1>
+      <div class='content'>
+        <ul>
+          <li>Testable</li>
+          <li>Large community, great support (Github, StackOverflow)</li>
+          <li>Detailed documentation (annotated source code)</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Slide 22 -->
+    <div class='slide' id='slide_22'>
+      <h1 class='title center'>Disadvantages</h1>
+      <div class='content'>
+        <ul>
+          <li>No clear design guidance (there’s always more than one way to do things)</li>
+          <li>More files to manage/logic is spread</li>
+          <li>Moderate learning curve</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Slide 23 -->
+    <div class='slide' id='slide_23'>
+      <h1 class='title center'>Resources</h1>
+      <div class='content'>
+        <ul>
+          <li>
+            <a href="https://github.com/documentcloud/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites" target="_blank">
+              https://github.com/documentcloud/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites
+            </a>
+          </li>
+          <li>
+            <a href="http://www.quora.com/What-are-some-good-resources-for-Backbone-js" target="_blank">
+              http://www.quora.com/What-are-some-good-resources-for-Backbone-js
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
   </body>
 </html>
