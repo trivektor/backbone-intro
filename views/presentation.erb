@@ -290,6 +290,27 @@ var KeywordView = Backbone.Model.extend({
         <ul>
           <li>Reusable code components (models, views)</li>
         </ul>
+        <pre class='sh_javascript_dom'>
+// Definition
+var CategoryAutocompleteView = Backbone.View.extend({
+  initialize: function() {
+    ...
+  },
+  setupAutocomplete: function() {
+    ...
+  },
+  setupDroppable: function(){
+    ...
+  }
+})
+
+var categoryAutocompleteView = new CategoryAutocompleteView({
+  el: $("#categories"),
+  model: category,
+  droppable: true,
+  onItemSelected: function(value, data) { ... }
+})
+        </pre>
       </div>
     </div>
     
@@ -305,11 +326,35 @@ var KeywordView = Backbone.Model.extend({
     <div class="slide">
       <h1 class='title center'>Advantages</h1>
       <div class='content'>
-        <ul style="margin-top: 100px">
+        <ul>
           <li>Testable</li>
-          <li>Large community, great support (Github, StackOverflow)</li>
-          <li>Detailed documentation (annotated source code)</li>
         </ul>
+        <pre class='sh_javascript_dom'>
+describe("Keyword", function() {
+  var keyword;
+  
+  beforeEach(function() {
+    keyword = new Keyword;
+    spyOn($, "ajax").andCallFake(function(params) { params.success(1); })
+    spyOn(keyword, "trigger");
+  })
+  
+  function keyword_event_trigger() { return keyword.trigger.mostRecentCall.args; }
+
+  it("should validate on create properly", function() {
+    var errors = keyword.validateOnCreate();
+    expect(errors.length).toBeGreaterThan(0);
+    expect(errors).toContain(i18n.add_keyword_no_category_selected_nag);
+  })
+  
+  it("should trigger an event after updating", function() {
+    keyword.set({keyword: "new book", code: 1, original_keyword: "book"});
+    keyword.update();
+    var args = keyword_event_trigger();
+    expect(args[0]).toEqual("keywordUpdatedEvent");
+  }
+}
+        </pre>
       </div>
     </div>
     
