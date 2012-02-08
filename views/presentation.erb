@@ -76,7 +76,8 @@ $("#and_yet_another_element").keypress(function() {
         <div style="float:left; width: 600px">
           <%= image_tag "img/bus_packed.jpg" %>
         </div>
-        <div style="margin-left: 650px; margin-top:100px">Logic is tightly coupled, packed</div>
+        <div class="illustration_caption">Logic is tightly coupled, packed</div>
+        <div class="clearfloat"></div>
       </div>
     </div>
 
@@ -87,7 +88,8 @@ $("#and_yet_another_element").keypress(function() {
         <div style="float:left">
           <%= image_tag "img/twin-girls.jpg" %>
         </div>
-        <div style="margin-left: 550px; margin-top:100px">No distinction between data and presentation</div>
+        <div class="illustration_caption">No distinction between data and presentation</div>
+        <div class="clearfloat"></div>
       </div>
     </div>
 
@@ -95,16 +97,17 @@ $("#and_yet_another_element").keypress(function() {
     <div class="slide">
       <h2 class="title">Status Quo</h2>
       <div class="content">
-        <div style="float:left; margin-right: 40px">
+        <div style="float:left">
           <%= image_tag "img/reused_bag.png" %>
         </div>
-        <div style="margin-top:130px">No easy way to reuse code components</div>
+        <div class="illustration_caption">No easy way to reuse code components</div>
       </div>
     </div>
     
     
     <div class="slide">
-      <div class="content center" style="padding-top:80px">
+      <h2 class="title center">What did you say Steve?</h2>
+      <div class="content center">
         <%= image_tag "img/steve.jpg" %>
       </div>
     </div>
@@ -399,6 +402,7 @@ describe("Keyword", function() {
         <ul>
           <li>Override built in functionality of Model/View when neccessary (example?)</li>
           <li>Event is your friend</li>
+          <li>Use descriptive names for events (i.e. "save" is not a good name)</li>
           <li>Use a templating language (Underscore, jQuery template, Handlebars). String concatenation stinks</li>
         </ul>
       </div>

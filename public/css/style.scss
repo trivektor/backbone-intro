@@ -21,6 +21,10 @@ body {
   overflow: hidden;
 }
 
+.clearfloat {
+  clear: both;
+}
+
 .slide {
   padding-top: 1px;
   height: 100%;
@@ -43,6 +47,12 @@ body {
       color: #fff;
     }
   }
+}
+
+.illustration_caption {
+  float: left;
+  margin: 190px 0 0 130px;
+  font-size: 31px;
 }
 
 .center {
