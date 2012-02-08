@@ -15,7 +15,7 @@
 
     
     <div class='slide'>
-      <h1 class='title center highlight'>Introduction to Backbone JS</h1>
+      <h1 class='center highlight'>Introduction to Backbone JS</h1>
       <div class='content center' style="font-size:26px; margin-top:40px">
         <a href="http://github.com/wookimiii" target="_blank">Andrew Kim</a> 
         and 
@@ -26,8 +26,8 @@
 
     
     <div class='slide'>
-      <h1 class='title'>What is Backbone JS?</h1>
-      <div class='content'>
+      <h2 class='title'>What is Backbone JS?</h2>
+      <div class='content spacing_top'>
         <ul>
           <li>emerging Javascript framework</li>
           <li>created by Jeremy Ashkenas, author of CoffeeScript</li>
@@ -39,7 +39,7 @@
     
     
     <div class='slide'>
-      <h1 class='title'>Status Quo</h1>
+      <h2 class='title'>Status Quo</h2>
       <div class='content'>
         <pre class='sh_javascript_dom'>
 //Callback soup and salad (not as good as Specialty's though)
@@ -71,7 +71,7 @@ $("#and_yet_another_element").keypress(function() {
     
     
     <div class="slide">
-      <h1 class="title">Status Quo</h1>
+      <h2 class="title">Status Quo</h2>
       <div class="content">
         <div style="float:left; width: 600px">
           <%= image_tag "img/bus_packed.jpg" %>
@@ -82,7 +82,7 @@ $("#and_yet_another_element").keypress(function() {
 
     
     <div class="slide">
-      <h1 class="title">Status Quo</h1>
+      <h2 class="title">Status Quo</h2>
       <div class="content">
         <div style="float:left">
           <%= image_tag "img/twin-girls.jpg" %>
@@ -93,7 +93,7 @@ $("#and_yet_another_element").keypress(function() {
 
     
     <div class="slide">
-      <h1 class="title">Status Quo</h1>
+      <h2 class="title">Status Quo</h2>
       <div class="content">
         <div style="float:left; margin-right: 40px">
           <%= image_tag "img/reused_bag.png" %>
@@ -111,12 +111,12 @@ $("#and_yet_another_element").keypress(function() {
     
     
     <div class="slide">
-      <h1 class="title center one_sentence">Before we get into Backbone JS</h1>
+      <h2 class="title center one_sentence">Before we get into Backbone JS</h2>
     </div>
     
     
     <div class="slide">
-      <h1 class='title center highlight'>Underscore JS</h1>
+      <h2 class='center highlight'>Underscore JS</h2>
       <div class="content center">
         <a href="http://documentcloud.github.com/underscore/" target="_blank">http://documentcloud.github.com/underscore/</a>
         <p style="margin-top:10px">Small library (< 4kb minified) that makes life easier</p>
@@ -125,7 +125,7 @@ $("#and_yet_another_element").keypress(function() {
     
     
     <div class="slide">
-      <h1 class='title center'>Underscore JS</h1>
+      <h2 class='title center'>Underscore JS</h2>
       <div class='content'>
         <h2>Arrays</h2>
         <p>first, initial, last, rest, compact, flatten, without, union, intersection, difference, uniq, zip, indexOf, last, IndexOf, range</p>
@@ -140,12 +140,12 @@ $("#and_yet_another_element").keypress(function() {
     
     
     <div class="slide">
-      <h1 class='title center one_sentence'>What does Backbone give you?</div>
+      <h2 class='title center one_sentence'>What does Backbone give you?</div>
     </div>
     
     
     <div class="slide">
-      <h1 class='title center one_sentence'>More Objects!</div>
+      <h2 class='title center one_sentence'>More Objects!</div>
     </div>
     
     
@@ -160,7 +160,7 @@ $("#and_yet_another_element").keypress(function() {
     
     
     <div class="slide">
-      <h1 class='title center'>Model</h1>
+      <h2 class='title center'>Model</h2>
       <div class='content center'>
         <%= image_tag "img/model.jpg" %>
         <%= image_tag "img/lego-donkey-kong.jpg" %>
@@ -169,7 +169,7 @@ $("#and_yet_another_element").keypress(function() {
     
     
     <div class="slide">
-      <h1 class='title center'>Model</h1>
+      <h2 class='title center'>Model</h2>
       <div class='content'>
         <ul>
           <li>A representation of data</li>
@@ -202,7 +202,7 @@ var Person = Backbone.Model.extend({
     
     
     <div class="slide">
-      <h1 class='title center'>Collection</h1>
+      <h2 class='title center'>Collection</h2>
       <div class='content'>
         <ul>
           <li>An ordered set of models</li>
@@ -234,7 +234,7 @@ People = [
     
     
     <div class="slide">
-      <h1 class='title center'>View</h1>
+      <h2 class='title center'>View</h2>
       <div class='content center'>
         <%= image_tag "img/a-view-to-a-kill-poster.jpg" %>
         <p style="margin-top:15px">A View to a Kill (1985)</p>
@@ -243,7 +243,7 @@ People = [
     
     
     <div class="slide">
-      <h1 class='title center'>View</h1>
+      <h2 class='title center'>View</h2>
       <div class='content'>
         <ul>
           <li>A view in the traditional sense (presentation logic), and a "presenter"</li>
@@ -272,21 +272,40 @@ var KeywordView = Backbone.Model.extend({
     
     
     <div class="slide">
-      <h1 class='title center one_sentence'>What we've learned</h1>
+      <h2 class='title center one_sentence'>What we've learned</h2>
     </div>
     
     
     <div class="slide">
-      <h1 class='title center'>Advantages</h1>
-      <div class='content'>
+      <h2 class='title'>Advantages</h2>
+      <div class='content spacing_top'>
         <ul>
           <li>Organized code base, modular code</li>
+        </ul>
+        <br />
+        |--------> models
+        <br />
+        |
+        <br />
+        |--------> views
+        <br />
+        |
+        <br />
+        |--------> collections
+        <br />
+        |
+        <br />
+        |--------> jst_templates
+        <br />
+        |
+        <br />
+        |--------> lib
         </ul>
       </div>
     </div>
 
     <div class="slide">
-      <h1 class='title center'>Advantages</h1>
+      <h2 class='title'>Advantages</h2>
       <div class='content'>
         <ul>
           <li>Reusable code components (models, views)</li>
@@ -316,19 +335,22 @@ var categoryAutocompleteView = new CategoryAutocompleteView({
     </div>
     
     <div class="slide">
-      <h1 class='title center'>Advantages</h1>
+      <h2 class='title'>Advantages</h2>
       <div class='content'>
         <ul>
-          <li>Design patterns and principles Dependency Injection, Publisher/Subscriber Pattern, Single Responsibility etc</li>
+          <li>Design patterns and principles Dependency Injection, Publisher/Subscriber Pattern etc</li>
         </ul>
+        <div class="center">
+          <%= image_tag "img/publisher_subscriber.jpg" %>
+        </div>
       </div>
     </div>
     
     <div class="slide">
-      <h1 class='title center'>Advantages</h1>
+      <h2 class='title'>Advantages</h2>
       <div class='content'>
         <ul>
-          <li>Testable</li>
+          <li>Testable (with Jasmine and Sinon)</li>
         </ul>
         <pre class='sh_javascript_dom'>
 describe("Keyword", function() {
@@ -361,8 +383,8 @@ describe("Keyword", function() {
     
     
     <div class='slide'>
-      <h1 class='title center'>Disadvantages</h1>
-      <div class='content' style="margin-top: 100px">
+      <h2 class='title'>Disadvantages</h2>
+      <div class='content spacing_top'>
         <ul>
           <li>No clear design guidance (there’s always more than one way to do things)</li>
           <li>More files to manage/logic is spread</li>
@@ -372,19 +394,19 @@ describe("Keyword", function() {
     </div>
     
     <div class='slide'>
-      <h1 class='title center'>Practices we apply</h1>
-      <div class='content' style='margin-top: 100px'>
+      <h2 class='title'>Practices we apply</h2>
+      <div class='content spacing_top'>
         <ul>
           <li>Override built in functionality of Model/View when neccessary (example?)</li>
           <li>Event is your friend</li>
-          <li>Use a templating language (Underscore, jQuery template, Handlebars) is a must. String concatenation stinks</li>
+          <li>Use a templating language (Underscore, jQuery template, Handlebars). String concatenation stinks</li>
         </ul>
       </div>
     </div>
     
     <div class='slide'>
-      <h1 class='title center'>Resources</h1>
-      <div class='content' style="margin-top: 100px">
+      <h2 class='title'>Resources</h2>
+      <div class='content spacing_top'>        
         <ul>
           <li>
             <a href="http://backbonejs.org/" target="_blank">
@@ -411,15 +433,26 @@ describe("Keyword", function() {
               http://tinnedfruit.com/2011/03/03/testing-backbone-apps-with-jasmine-sinon.html
             </a>
           </li>
+          <li>
+            <a href="http://trivektor.wordpress.com/2012/01/15/redo-the-classic-hangman-game-with-a-new-approach-backbone-js/">
+              http://trivektor.wordpress.com/2012/01/15/redo-the-classic-hangman-game-with-a-new-approach-backbone-js/
+            </a>
+          </li>
         </ul>
       </div>
     </div>
     
     <div class='slide'>
-      <h1 class='title center one_sentence'>
+      <h2 class='title center one_sentence'>
         Sample Application: 
         <a href="http://github-issues-browser.herokuapp.com/" target="_blank">Github Issues Browser</a>
-      </h1>
+      </h2>
+    </div>
+    
+    <div class='slide'>
+      <h2 class='title center one_sentence'>
+        And that's it. <a>Hasta la vista, baby</a>
+      </h2>
     </div>
     
   </body>
