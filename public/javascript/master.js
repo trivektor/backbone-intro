@@ -3,6 +3,8 @@ $(function() {
   var n = 1, keycode, slides = $(".slide");
   
   $(document).keyup(function(event) {
+    event.preventDefault();
+    
     keycode = event.keyCode;
     if ([37, 39].indexOf(keycode) == -1) return;
     
