@@ -8,7 +8,8 @@
     <script charset="utf-8" src="/javascript/sh.js" type="text/javascript"></script>
     <script charset="utf-8" src="/javascript/sh_javascript_dom.js" type="text/javascript"></script>
     <script charset="utf-8" src="/javascript/jquery.js" type="text/javascript"></script>
-
+    <script charset="utf-8" src="http://documentcloud.github.com/underscore/underscore-min.js" type="text/javascript"></script>
+    <script type='text/javascript' src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
     <script charset="utf-8" src="/javascript/master.js" type="text/javascript"></script>
   </head>
   <body onload="sh_highlightDocument();">
@@ -320,26 +321,79 @@ $("#and_yet_another_element").keypress(function() {
           <li>Captures user's interactions</li>
         </ul>
         <pre class="sh_javascript_dom">
-var KeywordView = Backbone.View.extend({
-  tagName: "li",
-  className: "keyword",
-  initialize: function() {
-    // Housekeeping and event bindings etc
-  }
-  events: {
-    'click .this' : 'doThat'
-  },
-  render: function() {
-    ...
-  },
-  doThat: function() {
-    // Do your shit
-  }
-})
+        var PersonView = Backbone.View.extend({
+          tagName: "li",
+          className: "person",
+          initialize: function() {
+            // Housekeeping and event bindings etc
+            this.model.bind('change', this.render);
+            // usually initializing the temple
+          }
+          events: {
+            'click .this' : 'doThat'
+          },
+          render: function() {
+            $(this.el).html(this.template(this.model));
+          },
+          doThat: function() {
+            // Do your stuff
+          }
+        })
         </pre>
       </div>
     </div>
     
+    <div class="slide">
+      <h2 class='title center'>View</h2>
+      <div class='content'>
+        <pre class="sh_javascript_dom">
+          var akView = new PersonView({el:"#person", model: ak});
+        </pre>
+      </div>
+    </div>
+
+    <div class='slide'>
+      <script>
+        $(function(){
+          var Person = Backbone.Model.extend({
+            name: function(){
+              return this.get('last_name') + ", " + this.get('first_name');
+            }
+          });
+          var PersonView = Backbone.View.extend({
+            model: Person,
+            initialize: function(){
+              this.model.bind("change", this.render, this)
+              this.render();
+            },
+            render: function(){
+              $(this.el).css('color', this.model.get('color'));
+              $(this.el).html(this.model.name() + " "  + this.model.get('color'));
+            }
+          });
+          var InputView = Backbone.View.extend({
+            model: Person,
+            events: {"keyup .color": 'updateColor'},
+            updateColor: function(){
+              var color = $(this.el).find(".color").val();
+              this.model.set({color: color});
+            }
+          });
+          var akim = new Person({first_name: 'Andrew', last_name: 'Kim', color: "green"});
+          var iv = new InputView({el: "#color-input", model: akim});
+          var pv = new PersonView({el: "#person", model: akim});
+        });
+      </script>
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <div id="demoperson" class='center'>
+        <div id='color-input'>Color: <input type='text' class='color' name='color'></input></div>
+        <div id='person'></div>
+      </div>
+    </div>
     
     <div class="slide">
       <h2 class='title center one_sentence'>What we've learned</h2>
