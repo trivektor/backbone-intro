@@ -383,26 +383,29 @@ $("#and_yet_another_element").keypress(function() {
         <ul>
           <li>Organized code base, modular code</li>
         </ul>
-        <div style="padding-left:100px">
-          <br />
-          |--------> models (self-explanatory)
-          <br />
-          |
-          <br />
-          |--------> views (self-explanatory)
-          <br />
-          |
-          <br />
-          |--------> collections (self-explanatory)
-          <br />
-          |
-          <br />
-          |--------> jst_templates (Underscore, Handlebars templates etc)
-          <br />
-          |
-          <br />
-          |--------> lib (jQuery, jQuery UI, Backbone, Underscore etc)
-        </div>
+        
+        <ul id="folder_structure">
+          <li>
+            <%= image_tag "img/folder.png" %>
+            <span>models</span>
+          </li>
+          <li>
+            <%= image_tag "img/folder.png" %>
+            <span>views</span>
+          </li>
+          <li>
+            <%= image_tag "img/folder.png" %>
+            <span>collections</span>
+          </li>
+          <li>
+            <%= image_tag "img/folder.png" %>
+            <span>jst_templates</span>
+          </li>
+          <li>
+            <%= image_tag "img/folder.png" %>
+            <span>lib</span>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -422,13 +425,54 @@ var CategoryAutocompleteView = Backbone.View.extend({
     ...
   }
 })
+</pre>
+      </div>
+    </div>
+    
+    <div class='slide'>
+      <h2 class='title'>Advantages</h2>
+      <div class='content'>
+        <%= image_tag "img/category_autocomplete.jpg", :style => "width:800px" %>
+        <br /><br />
+        <pre class='sh_javascript_dom'>
+// Used once
+var categoryAutocompleteView = new CategoryAutocompleteView(...)
+        </pre>
+      </div>
+    </div>
+    
+    <div class='slide'>
+      <h2 class='title'>Advantages</h2>
+      <div class='content'>
+        <%= image_tag "img/exclusion_autocomplete.jpg", :style => "width:800px" %>
+        <br /><br />
+        <pre class='sh_javascript_dom'>
+// Used twice
+var excludedCategoryAutocompleteView = new CategoryAutocompleteView(...)
+        </pre>
+      </div>
+    </div>
+    
+    <div class='slide'>
+      <h2 class='title'>Advantages</h2>
+      <div class='content'>
+        <%= image_tag "img/exclusion_autocomplete2.jpg", :style => "width:800px" %>
+        <br /><br />
+        <pre class='sh_javascript_dom'>
+// Used thrice
+var categoryExclusionAutocompleteView = new CategoryAutocompleteView(...)
+        </pre>
+      </div>
+    </div>
 
-// Re-used once
-var categoryAutocompleteView = new CategoryAutocompleteView({
-  el: $("#categories"),
-  model: category,
-  onItemSelected: function(value, data) { ... }
-})
+    <div class='slide'>
+      <h2 class='title'>Advantages</h2>
+      <div class='content'>
+        <%= image_tag "img/qr_autocomplete.jpg", :style => "width:800px" %>
+        <br /><br />
+        <pre class='sh_javascript_dom'>
+// Used fourice?
+var addRewrittenCategoriesAutocompleteView = new CategoryAutocompleteView(...)
         </pre>
       </div>
     </div>
@@ -521,18 +565,13 @@ describe("Keyword", function() {
             </a>
           </li>
           <li>
-            <a href="http://documentcloud.github.com/backbone/docs/todos.html" target="_blank">
-              http://documentcloud.github.com/backbone/docs/todos.html
+            <a href="https://github.com/addyosmani/backbone-fundamentals" target="_blank">
+              https://github.com/addyosmani/backbone-fundamentals
             </a>
           </li>
           <li>
             <a href="http://www.quora.com/What-are-some-good-resources-for-Backbone-js" target="_blank">
               http://www.quora.com/What-are-some-good-resources-for-Backbone-js
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/addyosmani/backbone-fundamentals" target="_blank">
-              https://github.com/addyosmani/backbone-fundamentals
             </a>
           </li>
           <li>
@@ -551,7 +590,7 @@ describe("Keyword", function() {
     
     <div class='slide'>
       <h2 class='title center one_sentence'>
-        Sample Application: 
+        Sample application: 
         <a href="http://github-issues-browser.herokuapp.com/" target="_blank">Github Issues</a>
       </h2>
     </div>
