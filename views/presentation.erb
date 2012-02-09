@@ -300,8 +300,6 @@ $("#and_yet_another_element").keypress(function() {
         </ul>
         <pre class="sh_javascript_dom">
         var PersonView = Backbone.View.extend({
-          tagName: "li",
-          className: "person",
           initialize: function() {
             // Housekeeping and event bindings etc
             this.model.bind('change', this.render);
@@ -422,16 +420,13 @@ var CategoryAutocompleteView = Backbone.View.extend({
   },
   setupAutocomplete: function() {
     ...
-  },
-  setupDroppable: function(){
-    ...
   }
 })
 
+// Re-used once
 var categoryAutocompleteView = new CategoryAutocompleteView({
   el: $("#categories"),
   model: category,
-  droppable: true,
   onItemSelected: function(value, data) { ... }
 })
         </pre>
