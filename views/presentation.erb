@@ -385,23 +385,23 @@ $("#and_yet_another_element").keypress(function() {
         </ul>
         <div style="padding-left:100px">
           <br />
-          |--------> models
+          |--------> models (self-explanatory)
           <br />
           |
           <br />
-          |--------> views
+          |--------> views (self-explanatory)
           <br />
           |
           <br />
-          |--------> collections
+          |--------> collections (self-explanatory)
           <br />
           |
           <br />
-          |--------> jst_templates
+          |--------> jst_templates (Underscore, Handlebars templates etc)
           <br />
           |
           <br />
-          |--------> lib
+          |--------> lib (jQuery, jQuery UI, Backbone, Underscore etc)
         </div>
       </div>
     </div>
@@ -449,7 +449,7 @@ var categoryAutocompleteView = new CategoryAutocompleteView({
       <h2 class='title'>Advantages</h2>
       <div class='content'>
         <ul>
-          <li>Testable (with Jasmine and Sinon)</li>
+          <li>Testable (with help from libraries such as Jasmine and Sinon)</li>
         </ul>
         <pre class='sh_javascript_dom'>
 describe("Keyword", function() {
@@ -468,18 +468,25 @@ describe("Keyword", function() {
     expect(errors.length).toBeGreaterThan(0);
     expect(errors).toContain(i18n.add_keyword_no_category_selected_nag);
   })
-  
-  it("should trigger an event after updating", function() {
-    keyword.set({keyword: "new book", code: 1, original_keyword: "book"});
-    keyword.update();
-    var args = keyword_event_trigger();
-    expect(args[0]).toEqual("keywordUpdatedEvent");
-  }
 }
         </pre>
       </div>
     </div>
     
+    
+        <div class="slide">
+          <h2 class='title'>Advantages</h2>
+          <div class='content'>
+            <pre class='sh_javascript_dom'>
+      it("should trigger an event after updating", function() {
+        keyword.set({keyword: "new book", code: 1, original_keyword: "book"});
+        keyword.update();
+        var args = keyword_event_trigger();
+        expect(args[0]).toEqual("keywordUpdatedEvent");
+      }
+            </pre>
+          </div>
+        </div>
     
     <div class='slide'>
       <h2 class='title'>Disadvantages</h2>

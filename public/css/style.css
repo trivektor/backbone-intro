@@ -24,7 +24,8 @@ body {
   padding-top: 1px;
   height: 100%;
   width: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  overflow: hidden; }
   .slide .title {
     font-size: 4em;
     padding: 0 35px;
