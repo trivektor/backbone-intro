@@ -195,7 +195,7 @@ $("#and_yet_another_element").keypress(function() {
       <br/>
       <br/>
       <br/>
-      <pre>
+      <pre class='sh_javascript_dom'>
       // Person object
       var person = {
         first_name: "Andrew",
@@ -210,7 +210,7 @@ $("#and_yet_another_element").keypress(function() {
       <div class='content'>
         <br/>
         <br/>
-        <pre>
+        <pre class='sh_javascript_dom'>
         // A model that represents a person object
         var Person = Backbone.Model.extend({
           save: function() {
@@ -233,26 +233,28 @@ $("#and_yet_another_element").keypress(function() {
     </div>
     
     <div class='slide'>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <pre>
-        var ak = new Person(person);
-        ak.full_name();
-        // "Andrew Kim"
+      <div class='content'>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <pre class='sh_javascript_dom'>
+          var ak = new Person(person);
+          ak.full_name();
+          // "Andrew Kim"
         
-        ak.attributes
-        // {
-        //   first_name: "Andrew"
-        //   last_name: "Kim"
-        //   favorite_color: blue
-        // }
+          ak.attributes
+          // {
+          //   first_name: "Andrew"
+          //   last_name: "Kim"
+          //   favorite_color: blue
+          // }
 
-        ak.fetch() //- will get the data using AJAX using REST standards
-        ak.save()  //- will save any changes using a PUT
+          ak.fetch() //- will get the data using AJAX using REST standards
+          ak.save()  //- will save any changes using a PUT
     
-      </pre>
+        </pre>
+      </div>
     </div>
     
     <div class="slide">
@@ -290,7 +292,7 @@ $("#and_yet_another_element").keypress(function() {
       <div class='content'>
         <br/>
         <br/>
-        <pre>
+        <pre class='sh_javascript_dom'>
           var People = Backbone.Collection.extend({
             model: Person
           });
@@ -406,25 +408,26 @@ $("#and_yet_another_element").keypress(function() {
         <ul>
           <li>Organized code base, modular code</li>
         </ul>
-        <br />
-        |--------> models
-        <br />
-        |
-        <br />
-        |--------> views
-        <br />
-        |
-        <br />
-        |--------> collections
-        <br />
-        |
-        <br />
-        |--------> jst_templates
-        <br />
-        |
-        <br />
-        |--------> lib
-        </ul>
+        <div style="padding-left:100px">
+          <br />
+          |--------> models
+          <br />
+          |
+          <br />
+          |--------> views
+          <br />
+          |
+          <br />
+          |--------> collections
+          <br />
+          |
+          <br />
+          |--------> jst_templates
+          <br />
+          |
+          <br />
+          |--------> lib
+        </div>
       </div>
     </div>
 
@@ -465,7 +468,7 @@ var categoryAutocompleteView = new CategoryAutocompleteView({
           <li>Design patterns and principles Dependency Injection, Publisher/Subscriber Pattern etc</li>
         </ul>
         <div class="center">
-          <%= image_tag "img/publisher_subscriber.jpg" %>
+          <%= image_tag "img/publisher_subscriber.jpg", :style => "width:800px" %>
         </div>
       </div>
     </div>
@@ -570,7 +573,7 @@ describe("Keyword", function() {
     <div class='slide'>
       <h2 class='title center one_sentence'>
         Sample Application: 
-        <a href="http://github-issues-browser.herokuapp.com/" target="_blank">Github Issues Browser</a>
+        <a href="http://github-issues-browser.herokuapp.com/" target="_blank">Github Issues</a>
       </h2>
     </div>
     
