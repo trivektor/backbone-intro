@@ -154,13 +154,22 @@ $("#and_yet_another_element").keypress(function() {
     
     <div class="slide">
       <div class='content center one_sentence'>
-        Everything is an Object <br />
-        (or a function) <br />
+        <h2>Really useful Objects</h2>
+        (or functions) <br />
+        <br />
         typeof Backbone=== "object” <br />
         typeof Backbone.Model === “function” <br />
       </div>
     </div>
     
+    <div class="slide">
+      <div class='content center one_sentence'>
+        <h2>Some not so useful</h2>
+        <br/>
+        typeof Backbone.Router=== "function” <br />
+        <i>(something about single page apps)</i>
+      </div>
+    </div>
     
     <div class="slide">
       <h2 class='title center'>Model</h2>
@@ -178,31 +187,72 @@ $("#and_yet_another_element").keypress(function() {
           <li>A representation of data</li>
           <li>Actions: saving, retrieving, conversion, validation, triggering events etc</li>
         </ul>
-        <pre class="sh_javascript_dom">
-// A model that represents a book object
-var book = {
-  title: "Gulliver’s Travels",
-  year: 1726,
-  author: "Johnathan Swift" 
-}
+      </div>
+    </div>
+    <div class='slide'>
+      <div class='content'>
+      <br/>
+      <br/>
+      <br/>
+      <pre>
+      // Person object
+      var person = {
+        first_name: "Andrew",
+        last_name: "Kim"
+        favorite_color: "blue" 
+      }
+      </pre>
+      </div>
+    </div>
 
-
-// A model that represents a person object
-var Person = Backbone.Model.extend({
-  save: function() {
-    ...
-  },
-  validate: function() {
-    // Make sure a cat does not get in here
-  },
-  edit: function() {
-    // I wanna change my name to "Mark Zuckerberg"
-  }
-});
+    <div class='slide'>
+      <div class='content'>
+        <br/>
+        <br/>
+        <pre>
+        // A model that represents a person object
+        var Person = Backbone.Model.extend({
+          save: function() {
+            ...
+          },
+          validate: function() {
+            // Make sure a cat does not get in here
+          },
+          edit: function() {
+            // I wanna change my name to "Mark Zuckerberg"
+          },
+          name: function(){
+            var name = this.get(first.name);
+            name = name + " " + this.get('last_name');
+            return name;
+          }
+        });
         </pre>
       </div>
     </div>
     
+    <div class='slide'>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <pre>
+        var ak = new Person(person);
+        ak.full_name();
+        // "Andrew Kim"
+        
+        ak.attributes
+        // {
+        //   first_name: "Andrew"
+        //   last_name: "Kim"
+        //   favorite_color: blue
+        // }
+
+        ak.fetch() //- will get the data using AJAX using REST standards
+        ak.save()  //- will save any changes using a PUT
+    
+      </pre>
+    </div>
     
     <div class="slide">
       <h2 class='title center'>Collection</h2>
@@ -212,25 +262,42 @@ var Person = Backbone.Model.extend({
           <li>Useful when working with "collection view" (a view with sub-views each of which contains a model)</li>
         </ul>
         <pre class='sh_javascript_dom'>
-// A pseudo-collection for the sake of illustration
-People = [
-	{
-	  name: "Barack Obama", 
-	  job: "US President"
-	},
-	{
-	  name: "Sandra Bullock", 
-	  job: "Actress"
-	},
-	{
-	  name: "David Beckham",
-	  job: "Soccer Player"
-	},
-	{
-	  name: "Arnold Schwarzenegger", 
-	  job: "N/A"
-	}
-]
+          // A pseudo-collection for the sake of illustration
+          celebrities = [
+            {
+              name: "Barack Obama", 
+              job: "US President"
+            },
+            {
+              name: "Sandra Bullock", 
+              job: "Actress"
+            },
+            {
+              name: "David Beckham",
+              job: "Soccer Player"
+            },
+            {
+              name: "Arnold Schwarzenegger", 
+              job: "N/A"
+            }
+          ]
+        </pre>
+      </div>
+    </div>
+
+    <div class='slide'>
+      <div class='content'>
+        <br/>
+        <br/>
+        <pre>
+          var People = Backbone.Collection.extend({
+            model: Person
+          });
+
+          var group = new People(celebrities);
+          group.at(2) //- David Beckham model
+          group.length //- 4
+          group.remove(group.at(1));
         </pre>
       </div>
     </div>
