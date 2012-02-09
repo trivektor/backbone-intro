@@ -188,28 +188,20 @@ $("#and_yet_another_element").keypress(function() {
           <li>A representation of data</li>
           <li>Actions: saving, retrieving, conversion, validation, triggering events etc</li>
         </ul>
-      </div>
-    </div>
-    <div class='slide'>
-      <div class='content'>
-      <br/>
-      <br/>
-      <br/>
-      <pre class='sh_javascript_dom'>
-      // Person object
-      var person = {
-        first_name: "Andrew",
-        last_name: "Kim"
-        favorite_color: "blue" 
-      }
-      </pre>
+        <pre class='sh_javascript_dom'>
+        // Person object
+        var person = {
+          first_name: "Andrew",
+          last_name: "Kim"
+          favorite_color: "blue" 
+        }
+        </pre>
       </div>
     </div>
 
     <div class='slide'>
+      <h2 class='title center'>Model</h2>
       <div class='content'>
-        <br/>
-        <br/>
         <pre class='sh_javascript_dom'>
         // A model that represents a person object
         var Person = Backbone.Model.extend({
@@ -233,11 +225,8 @@ $("#and_yet_another_element").keypress(function() {
     </div>
     
     <div class='slide'>
+      <h2 class='title center'>Model</h2>
       <div class='content'>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
         <pre class='sh_javascript_dom'>
           var ak = new Person(person);
           ak.full_name();
@@ -267,31 +256,18 @@ $("#and_yet_another_element").keypress(function() {
         <pre class='sh_javascript_dom'>
           // A pseudo-collection for the sake of illustration
           celebrities = [
-            {
-              name: "Barack Obama", 
-              job: "US President"
-            },
-            {
-              name: "Sandra Bullock", 
-              job: "Actress"
-            },
-            {
-              name: "David Beckham",
-              job: "Soccer Player"
-            },
-            {
-              name: "Arnold Schwarzenegger", 
-              job: "N/A"
-            }
+            { name: "Barack Obama",  job: "US President" },
+            { name: "Sandra Bullock", job: "Actress" },
+            { name: "David Beckham",  job: "Soccer Player" },
+            { name: "Arnold Schwarzenegger", job: "N/A" }
           ]
         </pre>
       </div>
     </div>
 
     <div class='slide'>
+      <h2 class='title center'>Collection</h2>
       <div class='content'>
-        <br/>
-        <br/>
         <pre class='sh_javascript_dom'>
           var People = Backbone.Collection.extend({
             model: Person
@@ -308,9 +284,8 @@ $("#and_yet_another_element").keypress(function() {
     
     <div class="slide">
       <h2 class='title center'>View</h2>
-      <div class='content center'>
+      <div class='content center spacing_top'>
         <%= image_tag "img/a-view-to-a-kill-poster.jpg" %>
-        <p style="margin-top:15px">A View to a Kill (1985)</p>
       </div>
     </div>
     
@@ -348,7 +323,8 @@ $("#and_yet_another_element").keypress(function() {
     <div class="slide">
       <h2 class='title center'>View</h2>
       <div class='content'>
-        <pre class="sh_javascript_dom">
+        <pre class="sh_javascript_dom spacing_top">
+          // Initialize the view and "dependency inject" the model
           var akView = new PersonView({el:"#person", model: ak});
         </pre>
       </div>
@@ -391,7 +367,7 @@ $("#and_yet_another_element").keypress(function() {
       <br />
       <br />
 
-      <div id="demoperson" class='center' style='font-size: 3em'>
+      <div id="demoperson" class='center spacing_top' style='font-size: 3em'>
         <div id='color-input'>Color: <input style='padding:10px;' type='text' class='color' name='color'></input></div>
         <div id='person'></div>
       </div>
