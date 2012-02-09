@@ -1,26 +1,22 @@
 pre.sh_sourceCode {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  background: #000; color:#fff; padding:10px;
-  line-height: 23px;
+  color: #000;
 }
 pre.sh_sourceCode .sh_keyword { color: #cf633e; font-weight: bold; }           /* language keywords */
 pre.sh_sourceCode .sh_type { color: darkgreen; }                            /* basic types */
 pre.sh_sourceCode .sh_usertype { color: teal; }                             /* user defined types */
-pre.sh_sourceCode .sh_string { color: #8d9d6a; font-family: monospace; }        /* strings and chars */
+pre.sh_sourceCode .sh_string { color: #52A8C6; font-family: monospace; }        /* strings and chars */
 pre.sh_sourceCode .sh_regexp { color: orange; font-family: monospace; }     /* regular expressions */
 pre.sh_sourceCode .sh_specialchar { color: pink; font-family: monospace; }  /* e.g., \n, \t, \\ */
-pre.sh_sourceCode .sh_comment { color: brown; font-style: italic; }         /* comments */
+pre.sh_sourceCode .sh_comment { color: #8F93F4; font-style: italic; }         /* comments */
 pre.sh_sourceCode .sh_number { color: purple; }                             /* literal numbers */
 pre.sh_sourceCode .sh_preproc { color: darkblue; font-weight: bold; }       /* e.g., #include, import */
-pre.sh_sourceCode .sh_symbol { color: #fff; }                            /* e.g., <, >, + */
-pre.sh_sourceCode .sh_function { color: #f9e67b; font-weight: bold; }         /* function calls and declarations */
-pre.sh_sourceCode .sh_cbracket { color: #fff; }                              /* block brackets (e.g., {, }) */
+pre.sh_sourceCode .sh_symbol { color: #000; }                            /* e.g., <, >, + */
+pre.sh_sourceCode .sh_function { color: #EDA600; font-weight: bold; }         /* function calls and declarations */
+pre.sh_sourceCode .sh_cbracket { color: #000; }                              /* block brackets (e.g., {, }) */
 pre.sh_sourceCode .sh_todo { font-weight: bold; background-color: cyan; }   /* TODO and FIXME */
 
 /* Predefined variables and functions (for instance glsl) */
-pre.sh_sourceCode .sh_predef_var { color: #fff }
+pre.sh_sourceCode .sh_predef_var { color: #000 }
 pre.sh_sourceCode .sh_predef_func { color: darkblue; font-weight: bold; }
 
 /* for OOP */
