@@ -203,7 +203,7 @@ $("#and_yet_another_element").keypress(function() {
       <h2 class='title center'>Model</h2>
       <div class='content'>
         <pre class='sh_javascript_dom'>
-        // A model that represents a person object
+        // A model that represents a person
         var Person = Backbone.Model.extend({
           save: function() {
             ...
@@ -521,12 +521,12 @@ describe("Keyword", function() {
           <h2 class='title'>Advantages</h2>
           <div class='content'>
             <pre class='sh_javascript_dom'>
-      it("should trigger an event after updating", function() {
-        keyword.set({keyword: "new book", code: 1, original_keyword: "book"});
-        keyword.update();
-        var args = keyword_event_trigger();
-        expect(args[0]).toEqual("keywordUpdatedEvent");
-      }
+it("should trigger an event after updating", function() {
+  keyword.set({keyword: "new book", code: 1, original_keyword: "book"});
+  keyword.update();
+  var args = keyword_event_trigger();
+  expect(args[0]).toEqual("keywordUpdatedEvent");
+}
             </pre>
           </div>
         </div>
